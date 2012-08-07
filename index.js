@@ -1,6 +1,6 @@
 
 /**
- * Convert `str` of html to a string of js.
+ * Convert `str` to a module.exports string.
  *
  * @param {String} str
  * @return {String}

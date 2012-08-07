@@ -1,11 +1,11 @@
 
-# html-to-js
+# string-to-js
 
-  Make HTML require()-able.
+  Make plain text (HTML, CSS, JSON, etc) require()-able.
 
 ## Installation
 
-   $ npm install html-to-js
+   $ npm install string-to-js
 
 ## Example
 
@@ -26,11 +26,11 @@ js:
  */
 
 var fs = require('fs')
-  , html2js = require('html-to-js')
+  , str2js = require('string-to-js')
   , read = fs.readFileSync;
 
 var html = read('tip.html', 'utf8');
-var js = html2js(html);
+var js = str2js(html);
 console.log(js);
 ```
 
