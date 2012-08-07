@@ -1,7 +1,44 @@
 
 # html-to-js
 
-  Make HTML require()-able
+  Make HTML require()-able.
+
+## Installation
+
+   $ npm install html-to-js
+
+## Example
+
+tip.html:
+
+```html
+<div class="tip">
+  <div class="tip-message"></div>
+</div>
+```
+
+js:
+
+```js
+
+/**
+ * Module dependencies.
+ */
+
+var fs = require('fs')
+  , html2js = require('html-to-js')
+  , read = fs.readFileSync;
+
+var html = read('test/tip.html', 'utf8');
+var js = html2js(html);
+console.log(js);
+```
+
+output js string:
+
+```js
+module.exports = '<div class="tip">\n  <div class="tip-message">\'Message here\'</div>\n</div>';
+```
 
 ## License 
 
