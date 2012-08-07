@@ -2,7 +2,7 @@
   "name": "html-to-js",
   "version": "0.0.1",
   "description": "Make HTML require()-able",
-  "keywords": [],
+  "keywords": ["html", "require"],
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "dependencies": {},
   "devDependencies": {
