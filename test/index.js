@@ -16,4 +16,13 @@ describe('str2js(str)', function(){
     vm.runInNewContext(js, { module: mod });
     mod.exports.should.equal(html);
   })
+  it('should allow for exporting multiple strings', function(){
+    var obj = { a: 'aaaaa', b: 'bbbbb', c: 'ccccc' };
+    var js = str2js(obj);
+    var mod = { exports: {} };
+    vm.runInNewContext(js, { module: mod, exports: mod.exports });
+    mod.exports.a.should.be.equal(obj.a);
+    mod.exports.b.should.be.equal(obj.b);
+    mod.exports.c.should.be.equal(obj.c);
+  })
 })
