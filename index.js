@@ -10,6 +10,7 @@
 module.exports = function(str){
   return "module.exports = '"
     + str
+      .replace(/\\/g, "\\\\")
       .replace(/'/g, "\\'")
       .replace(/\r\n|\r|\n/g, "\\n")
     + "';";
