@@ -9,5 +9,9 @@
     "mocha": "*",
     "should": "*"
   },
-  "main": "index"
+  "main": "index",
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/visionmedia/node-string-to-js.git"
+  }
 }
