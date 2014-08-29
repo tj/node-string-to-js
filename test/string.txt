@@ -1,0 +1,2 @@
+a simple test for escape characters, "\n", "\r" and '\bb' etc.,
+which should keep them as what they are in the original text.
