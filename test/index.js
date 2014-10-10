@@ -17,3 +17,10 @@ describe('str2js(str)', function(){
     mod.exports.should.equal(html);
   })
 })
+describe('str2js(str, var)', function(){
+  it('should return js with custom variable', function(){
+    var html = read('test/tip.html', 'utf8');
+    var js = str2js(html, 'testVar');
+    js.should.match(/var testVar =/);
+  })
+})
